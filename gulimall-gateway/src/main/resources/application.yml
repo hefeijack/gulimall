@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: baidu_route
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+        - id: zju_route
+          uri: https://grs.zju.edu.cn
+          predicates:
+            - Query=url,zju
